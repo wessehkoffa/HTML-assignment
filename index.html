@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+ <head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   
+   <script src="script.js"></script>
+   <link href="first.css" rel="stylesheet" />
+ </head>
+ 
+ <body>
+  
+  <h1> {{myMagic}}</h1>
+  <p>This is how to request data from the sever</p>
+   <div data-ng-controller="myController">
+       <table>
+	      <thead>
+		     <tr>
+			    <th>Name</th>
+			    <th>Likes</th>
+			    <th>Dislike</th>
+			    <th>Likes/Dislike</th>
+				
+			 </tr>
+		  </thead>
+		    <tbody>
+			   <tr data-ng-repeat="technology in technologies">
+			     <td>{{technology.name}}</td>
+			     <td>{{technology.likes}}</td>
+			     <td>{{technology.dislikes}}</td>
+			  <td>   
+			<input type ="button" value="Like" data-ng-click=
+			"incrementLikes(technology)"/></td>
+			  
+			 <td>
+			 <input type ="button" value="Dislike" data-ng-click=
+			 "incrementDislikes(technology)"/></td> 
+			
+			   </tr>
+			</tbody>
+	   </table>
+	     
+	
+	  
+	   
+   </div>
+ 
+ </body>
+ 
+ </html>
